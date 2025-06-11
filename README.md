@@ -1,18 +1,50 @@
-# Getting Started with Create React App
+# User Management System (UMS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based application designed to manage users with distinct roles, provide role-specific content, and support software testing.
+
+## Tech Stack
+
+- **Frontend**: React, Bootstrap
+- **Backend**: Firebase (Authentication, Firestore, Cloud Functions)
+- **Databases**: PostgreSQL, MongoDB
+- **Hosting**: Azure (Static Web Apps, Databases)
+- **CI/CD**: GitHub Actions
+- **Testing**: Playwright, Jest, OWASP ZAP
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16+)
+- npm
+- Firebase CLI
+- Azure CLI
+
+### Installation
+
+1.  Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd ums-app
+    ```
+2.  Install NPM packages:
+    ```sh
+    npm install
+    ```
+3.  Set up your environment variables by creating a `.env` file in the root directory. See `.env.example` for required variables.
+
+### Running the application
+
+```sh
+npm start
+```
+
+This runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 

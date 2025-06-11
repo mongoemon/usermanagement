@@ -1,0 +1,191 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "User Management System API",
+    "description": "API documentation for the UMS application",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5001/usermanagement-2c34d/us-central1",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {},
+  "definitions": {
+    "UserInput": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "user@example.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "password123"
+        },
+        "role": {
+          "type": "string",
+          "example": "viewer"
+        }
+      },
+      "required": [
+        "email",
+        "password",
+        "role"
+      ]
+    },
+    "RoleUpdate": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "example": "some-user-id"
+        },
+        "role": {
+          "type": "string",
+          "example": "editor"
+        }
+      },
+      "required": [
+        "uid",
+        "role"
+      ]
+    },
+    "DeleteUser": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "example": "some-user-id"
+        }
+      },
+      "required": [
+        "uid"
+      ]
+    },
+    "ArticleInput": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "My Awesome Article"
+        },
+        "content": {
+          "type": "string",
+          "example": "This is the content of the article."
+        }
+      },
+      "required": [
+        "title",
+        "content"
+      ]
+    },
+    "ArticleUpdate": {
+      "type": "object",
+      "properties": {
+        "articleId": {
+          "type": "string",
+          "example": "some-article-id"
+        },
+        "title": {
+          "type": "string",
+          "example": "My Updated Awesome Article"
+        },
+        "content": {
+          "type": "string",
+          "example": "This is the updated content."
+        },
+        "published": {
+          "type": "boolean",
+          "example": true
+        }
+      },
+      "required": [
+        "articleId",
+        "title",
+        "content",
+        "published"
+      ]
+    },
+    "DeleteArticle": {
+      "type": "object",
+      "properties": {
+        "articleId": {
+          "type": "string",
+          "example": "some-article-id"
+        }
+      },
+      "required": [
+        "articleId"
+      ]
+    },
+    "FeatureFlagInput": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "newFeature"
+        },
+        "enabled": {
+          "type": "boolean",
+          "example": true
+        }
+      },
+      "required": [
+        "name",
+        "enabled"
+      ]
+    },
+    "FeatureFlagUpdate": {
+      "type": "object",
+      "properties": {
+        "flagId": {
+          "type": "string",
+          "example": "some-flag-id"
+        },
+        "enabled": {
+          "type": "boolean",
+          "example": false
+        }
+      },
+      "required": [
+        "flagId",
+        "enabled"
+      ]
+    },
+    "DeleteFeatureFlag": {
+      "type": "object",
+      "properties": {
+        "flagId": {
+          "type": "string",
+          "example": "some-flag-id"
+        }
+      },
+      "required": [
+        "flagId"
+      ]
+    },
+    "BugReportInput": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "UI Glitch on Login"
+        },
+        "description": {
+          "type": "string",
+          "example": "The login button is misaligned on mobile."
+        },
+        "stepsToReproduce": {
+          "type": "string",
+          "example": "1. Open on mobile. 2. Look at login button."
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "stepsToReproduce"
+      ]
+    }
+  }
+}
