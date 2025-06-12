@@ -9,7 +9,8 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "docs:generate": "node swagger.js"
+    "docs:generate": "node swagger.js",
+    "test": "mocha --reporter spec"
   },
   "engines": {
     "node": "22"
@@ -23,9 +24,12 @@
     "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
+    "chai": "^4.5.0",
     "eslint": "^8.15.0",
     "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0",
+    "firebase-functions-test": "^3.4.1",
+    "mocha": "^11.6.0",
+    "sinon": "^20.0.0",
     "swagger-autogen": "^2.23.7"
   },
   "private": true
